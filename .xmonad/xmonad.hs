@@ -363,8 +363,8 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-  spawnOnce "exec ~/bin/bartoggle"
-  spawnOnce "exec ~/bin/eww daemon"
+--  spawnOnce "exec ~/bin/bartoggle"
+--  spawnOnce "exec ~/bin/eww daemon"
   spawnOnce "espanso daemon"
   spawn "xsetroot -cursor_name left_ptr"
   spawnOnce "exec ~/bin/lock.sh"
