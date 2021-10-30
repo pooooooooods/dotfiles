@@ -365,6 +365,7 @@ myLogHook = return ()
 myStartupHook = do
 --  spawnOnce "exec ~/bin/bartoggle"
 --  spawnOnce "exec ~/bin/eww daemon"
+  spawnOnce "barriers --daemon --name archelonet --enable-crypto -c ~/.config/barrier --address :24800"
   spawnOnce "espanso daemon"
   spawn "xsetroot -cursor_name left_ptr"
   spawnOnce "exec ~/bin/lock.sh"
