@@ -10,5 +10,8 @@
 # Mute the mic by default
 pactl set-source-mute 2 toggle &
 
+# Screensaver is configured to turn-off screen. Turn it off as xidlehook takes care of this.
+xset s off &
+
 # Start xmonad
 exec xmonad
