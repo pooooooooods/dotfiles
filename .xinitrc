@@ -5,7 +5,8 @@
 # (_)_/\_\_|_| |_|_|\__|_|  \___|
 
 # Loads keymappings that I have configured
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap &
+# Do not run xmodmap command as I am no longer on GK61. VIA Gang
+# [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap &
 
 # Mute the mic by default
 pactl set-source-mute 2 toggle &

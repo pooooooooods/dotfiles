@@ -102,11 +102,11 @@ clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -ru
 -- ewwclose = spawn "exec ~/bin/eww close-all"
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
 maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send \"Screenshot\" \"Saved to Desktop\" -i flameshot"
-rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\" "
+rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi drun -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\""
 muteMic = spawn "pactl set-source-mute 2 toggle && if [[ $(pactl get-source-mute 2) = \"Mute: no\" ]]; then xset led named 'Caps Lock'; else xset -led named 'Caps Lock'; fi &&  notify-send \"Microphone\" \"$(pactl get-source-mute 2)\""
 muteSpeaker = spawn "pactl set-sink-mute 1 toggle &&  notify-send \"Speaker\" \"Toggled speaker\""
-increaseVolume = spawn "pactl set-sink-volume 1 +5% && notify-send \"Speaker\" \"Increased volume. \n Current volume: $(pactl get-sink-volume 1 | grep -o -E '(\\w*)\\%' | head -1)\""
-decreaseVolume = spawn "pactl set-sink-volume 1 -5% && notify-send \"Speaker\" \"Decreased volume. \n Current volume: $(pactl get-sink-volume 1 | grep -o -E '(\\w*)\\%' | head -1)\""
+increaseVolume = spawn "pactl set-sink-volume 0 +5% && notify-send \"Speaker\" \"Increased volume. \n Current volume: $(pactl get-sink-volume 0 | grep -o -E '(\\w*)\\%' | head -1)\""
+decreaseVolume = spawn "pactl set-sink-volume 0 -5% && notify-send \"Speaker\" \"Decreased volume. \n Current volume: $(pactl get-sink-volume 0 | grep -o -E '(\\w*)\\%' | head -1)\""
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 

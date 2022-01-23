@@ -20,7 +20,16 @@ matches:
     replace: "Hi there!"
 
   - trigger: "ap@"
+    replace: "adityapudipeddi@gmail.com"
+    
+  - trigger: "ax@"
+    replace: "adityaaxelblaze@gmail.com"
+
+  - trigger: "app@"
     replace: "aditya.pudipeddi@postman.com"
+
+  - trigger: "home@"
+    replace: "45-50-9, GF3, Raj Enclave, Abidnagar, Akkayyapalem, Visakhapatnam, Andhra Pradesh - 530016"
 
   - trigger: "docker@"
     replace: "docker exec -it $(docker ps -q) bash"
